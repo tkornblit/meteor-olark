@@ -2,33 +2,33 @@ Olark = {};
 
 var MY_KEY = '1089-287-10-9258';
 
-Olark.prototype.config = {
+Olark.config = {
     loader: "static.olark.com/jsclient/loader0.js",
     name: "olark",
     methods: ["configure", "extend", "declare", "identify"]
 };
 
 
-Olark.prototype.load = function() {
+load = function() {
     var f = window,
         d = document,
         l = f.location.protocol == "https:" ? "https:" : "http:",
-        z = this.config.name,
+        z = Olark.config.name,
         r = "load";
     var nt = function() {
         f[z] = function() {
             (a.s = a.s || []).push(arguments)
         };
         var a = f[z]._ = {},
-            q = this.config.methods.length;
+            q = Olark.config.methods.length;
         while (q--) {
             (function(n) {
                 f[z][n] = function() {
                     f[z]("call", n, arguments)
                 }
-            })(this.config.methods[q])
+            })(Olark.config.methods[q])
         }
-        a.l = this.config.loader;
+        a.l = Olark.config.loader;
         a.i = nt;
         a.p = {
             0: +new Date
@@ -92,9 +92,6 @@ Olark.prototype.load = function() {
     nt()
 };
 
-Olark.prototype.init = function() {
-    this.loader = this.load();
-    this.loader.identify(MY_KEY);
-};
 
-return (new Olark());
+olark = load();
+olark.loader.identify(MY_KEY);
