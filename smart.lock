@@ -2,12 +2,12 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "Olark": {
+      "olark": {
         "path": "."
       }
     },
     "packages": {
-      "Olark": {
+      "olark": {
         "path": "."
       }
     }
