@@ -94,4 +94,4 @@ load = function() {
 
 
 olark = load();
-olark.loader.identify(MY_KEY);
+olark.identify(MY_KEY);
