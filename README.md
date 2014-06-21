@@ -20,3 +20,5 @@ In settings.json add
   }
 }
 ```
+
+**DISCLAIMER:** This README.md was quickly created by the help of https://github.com/datariot/meteor-ganalytics.
