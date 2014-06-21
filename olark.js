@@ -96,7 +96,7 @@ if(Meteor.settings && Meteor.settings.public !== undefined && Meteor.settings.pu
 
     var ID = Meteor.settings.public.olark.identity;
 
-    olark.identity(ID);
+    olark.identify(ID);
 
 } else {
     console.log("public.olark.identity has not been set in your settings.json file.")
