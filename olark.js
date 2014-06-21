@@ -1,7 +1,5 @@
 Olark = {};
 
-var MY_KEY = '1089-287-10-9258';
-
 Olark.config = {
     loader: "static.olark.com/jsclient/loader0.js",
     name: "olark",
@@ -94,4 +92,12 @@ load = function() {
 
 load();
 
-olark.identify(MY_KEY);
+if(Meteor.settings && Meteor.settings.public !== undefined && Meteor.settings.public.olark !== undefined && Meteor.settings.public.olark.identity !== undefined) {
+
+    var ID = Meteor.settings.public.olark.identity;
+
+    olark.identity(ID);
+
+} else {
+    console.log("public.olark.identity has not been set in your settings.json file.")
+}
