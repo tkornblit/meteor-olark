@@ -92,7 +92,7 @@ load = function() {
 
 load();
 
-if(Meteor.settings && Meteor.settings !== undefined && Meteor.settings.olark !== undefined && Meteor.settings.olark.identity !== undefined) {
+if(Meteor.settings && Meteor.settings.public !== undefined && Meteor.settings.public.olark !== undefined && Meteor.settings.public.olark.identity !== undefined) {
 
     var ID = Meteor.settings.public.olark.identity;
 
