@@ -92,6 +92,6 @@ load = function() {
     nt()
 };
 
+load();
 
-olark = load();
 olark.identify(MY_KEY);
