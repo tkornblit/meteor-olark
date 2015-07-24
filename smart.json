@@ -1,9 +1,0 @@
-{
-  "name": "olark",
-  "description": "Olark chat port to meteor",
-  "homepage": "https://github.com/tkornblit/meteor-olark",
-  "author": "Tom Kornblit <ton@flutter-app.com>",
-  "version": "0.9.1",
-  "git": "https://github.com/tkornblit/meteor-olark.git",
-  "packages": {}
-}
