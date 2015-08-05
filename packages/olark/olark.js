@@ -1,6 +1,4 @@
-Olark = {};
-
-Olark.config = {
+KR.Olark.Config = {
     loader: "static.olark.com/jsclient/loader0.js",
     name: "olark",
     methods: ["configure", "extend", "declare", "identify"]
@@ -11,22 +9,22 @@ load = function() {
     var f = window,
         d = document,
         l = f.location.protocol == "https:" ? "https:" : "http:",
-        z = Olark.config.name,
+        z = KR.Olark.Config.name,
         r = "load";
     var nt = function() {
         f[z] = function() {
             (a.s = a.s || []).push(arguments)
         };
         var a = f[z]._ = {},
-            q = Olark.config.methods.length;
+            q = KR.Olark.Config.methods.length;
         while (q--) {
             (function(n) {
                 f[z][n] = function() {
                     f[z]("call", n, arguments)
                 }
-            })(Olark.config.methods[q])
+            })(KR.Olark.Config.methods[q])
         }
-        a.l = Olark.config.loader;
+        a.l = KR.Olark.Config.loader;
         a.i = nt;
         a.p = {
             0: +new Date
@@ -92,7 +90,7 @@ load = function() {
 
 load();
 
-if(Meteor.settings && Meteor.settings.public !== undefined && Meteor.settings.public.olark !== undefined && Meteor.settings.public.olark.identity !== undefined) {
+if(Meteor.settings && !_.isUndefined(Meteor.settings.public) && !_.isUndefined(Meteor.settings.public.olark) && !_.isUndefined(Meteor.settings.public.olark.identity)) {
 
     var ID = Meteor.settings.public.olark.identity;
 
