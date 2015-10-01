@@ -1,24 +1,27 @@
-Olark: Live Chat
-===================================
+# Olark: Live Chat
 
-Software that lifts customer support and sales.
+This is the Meteor package for Olark, software that lifts customer support and sales.
 
-### Installing
+## Installation
+
 ```
-mrt add olark
+meteor add tkornblit:olark
 ```
 
-If you don't have a settings.json file, you need to add one and load it according to the Meteor documentation. http://docs.meteor.com/#meteor_settings
+## Settings
 
-In settings.json add
+If you don't have a `settings.json` file, you need to [add one](http://docs.meteor.com/#meteor_settings). Then, adjust your `public` section this way:
+
 ```json
 {
   "public" : {
     "olark": {
-      "identity":"XXXX-XXX-XX-XXXX"
+      "identity": "XXXX-XXX-XX-XXXX"
     }
   }
 }
 ```
+
+The `identity` is your Site-ID provided by Olark. You can see it in [Installation](https://www.olark.com/settings/code) section of your Olark dashboard.
 
 **DISCLAIMER:** This README.md was quickly created by the help of https://github.com/datariot/meteor-ganalytics.
